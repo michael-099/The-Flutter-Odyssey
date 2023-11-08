@@ -10,40 +10,47 @@ class MyApp extends StatelessWidget {
               title: Text("sign in"),
             ),
             body:SafeArea(
-              child: Center(
-                child: Column(
-                  children: [
-        
-        
-                     Padding(
-                       padding: const EdgeInsets.all(35.0),
-                       child: TextField(
-                        //  controller: textController2,
-                        decoration: InputDecoration(
-                          labelText: "user name ",
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black),
-                          ),
-                        ),
-                                         ),
-                     ),
-                   
-                   
-                   
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical:220.0 ),
+                child: Center(
+                  child: Column(
+                    children: [
+                      
               
-                    Padding(
-                      padding: const EdgeInsets.all(35.0),
-                      child: TextField(
-                        //  controller: textController2,
-                        decoration: InputDecoration(
-                          labelText: "password",
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black),
+                       Padding(
+                         padding: const EdgeInsets.symmetric(horizontal:30.0 ,vertical: 8.0),
+                         
+                         child: TextField(
+                          //  controller: textController2,
+                          decoration: InputDecoration(
+                            labelText: "user name ",
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.black),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
+                                           ),
+                       ),
+                     
+                       
+                      
+                
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal:30.0 ,vertical: 8.0),
+
+                        child: TextField(
+                          //  controller: textController2,
+                          decoration: InputDecoration(
+                            labelText: "password",
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.black),
+                               borderRadius: BorderRadius.circular(10),
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             )

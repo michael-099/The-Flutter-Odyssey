@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
                           labelText: "user name ",
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(color: Colors.black),
+                             borderRadius: BorderRadius.circular(10),
                           ),
                         ),
                                          ),
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
                           labelText: "Email ",
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(color: Colors.black),
+                             borderRadius: BorderRadius.circular(10),
                           ),
                         ),
                                          ),
@@ -53,6 +55,7 @@ class MyApp extends StatelessWidget {
                           labelText: "password",
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(color: Colors.black),
+                             borderRadius: BorderRadius.circular(10),
                           ),
                         ),
                       ),
