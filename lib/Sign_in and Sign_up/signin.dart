@@ -7,15 +7,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-            appBar: AppBar(
-              title: Text("sign in"),
-            ),
+            
             body:SafeArea(
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical:220.0 ),
                 child: Center(
                   child: Column(
                     children: [
+                      Text("Sign in",style: TextStyle(fontSize: 40,color:Color.fromARGB(255, 117, 116, 114),fontWeight: FontWeight.w600)),
+                      SizedBox(height: 20,width: 20,),
                       MyTextField(labelText: "User Name",),
                       MyTextField( labelText: "password",),
                     ],
