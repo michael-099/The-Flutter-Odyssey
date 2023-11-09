@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'MyTextField.dart';
+import 'button.dart';
 
 
 class MyApp extends StatelessWidget {
@@ -15,11 +16,11 @@ class MyApp extends StatelessWidget {
                 child: Center(
                   child: Column(
                    children: [ 
-                         Text("Sign up"),
-                         
-                       MyTextField(labelText: "User Name",),
+                      Text("Sign Up",style: TextStyle(fontSize: 40,color:Color.fromARGB(255, 117, 116, 114),fontWeight: FontWeight.w600)),
+                        MyTextField(labelText: "User Name",),
                         MyTextField( labelText: "password",),
                         MyTextField(labelText: "Email",),
+                        Button(label: "sign up ", width: 7500 ,height: 40)
                       ],
                   ),
                 ),

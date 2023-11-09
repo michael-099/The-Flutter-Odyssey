@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'MyTextField.dart';
+import 'button.dart';
 
 class MyApp extends StatelessWidget {
   final TextEditingController textController = TextEditingController();
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
                       SizedBox(height: 20,width: 20,),
                       MyTextField(labelText: "User Name",),
                       MyTextField( labelText: "password",),
+                      Button(label: "sign in ", width: 7500 ,height: 40)
                     ],
                   ),
                 ),
