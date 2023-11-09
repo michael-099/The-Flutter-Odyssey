@@ -19,7 +19,17 @@ class MyApp extends StatelessWidget {
                       SizedBox(height: 20,width: 20,),
                       MyTextField(labelText: "User Name",),
                       MyTextField( labelText: "password",),
-                      Button(label: "sign in ", width: 7500 ,height: 40)
+                      Button(label: "sign in ", width: 700 ,height: 40,),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 8.0),
+                        child: Row(
+                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children:[                      
+                            Text("forget password? ",style: TextStyle(color: Colors.blue[400]),textAlign: TextAlign.left,),
+                            Text("sign up",style: TextStyle(color: Colors.blue[400]),textAlign: TextAlign.right,),]),
+                      ),
+                      
+
                     ],
                   ),
                 ),

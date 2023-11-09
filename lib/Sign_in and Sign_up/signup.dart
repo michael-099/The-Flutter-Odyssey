@@ -20,7 +20,15 @@ class MyApp extends StatelessWidget {
                         MyTextField(labelText: "User Name",),
                         MyTextField( labelText: "password",),
                         MyTextField(labelText: "Email",),
-                        Button(label: "sign up ", width: 7500 ,height: 40)
+                        Button(label: "sign up ", width: 7500 ,height: 40),
+                         Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 8.0),
+                        child: Row(
+                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children:[                      
+                            Text("sign in",style: TextStyle(color: Colors.blue[400]),textAlign: TextAlign.right,),]),
+                      ),
+                        
                       ],
                   ),
                 ),
