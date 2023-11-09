@@ -14,7 +14,7 @@ class Button extends StatelessWidget {
         color: Colors.black,
         width: width,
         height: height,
-        // decoration: BoxDecoration(borderRadius:BorderRadius.circular(1) ),
+        decoration: BoxDecoration(borderRadius:BorderRadius.circular(1) ),
         child: Center(
           child: Text(
             label,
