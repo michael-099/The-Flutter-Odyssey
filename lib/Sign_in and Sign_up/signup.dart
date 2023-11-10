@@ -27,8 +27,7 @@ class MyApp extends StatelessWidget {
                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children:[                      
                             Text("sign in",style: TextStyle(color: Colors.blue[400]),textAlign: TextAlign.right,),]),
-                      ),
-                        
+                      ),     
                       ],
                   ),
                 ),
