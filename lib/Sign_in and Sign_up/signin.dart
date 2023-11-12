@@ -53,6 +53,7 @@ class SignIn extends StatelessWidget {
                           textAlign: TextAlign.right,
                         ),
                         onTap: () {
+
                           Navigator.push(
                               context,
                               MaterialPageRoute(
