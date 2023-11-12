@@ -26,9 +26,11 @@ class SignIn extends StatelessWidget {
               ),
               MyTextField(
                 labelText: "User Name",
+                obscureText: false,
               ),
               MyTextField(
                 labelText: "password",
+                obscureText: true,
               ),
               Button(
                 label: "sign in ",

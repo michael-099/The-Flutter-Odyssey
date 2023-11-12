@@ -21,12 +21,15 @@ class SignUp extends StatelessWidget {
                       fontWeight: FontWeight.w600)),
               MyTextField(
                 labelText: "User Name",
+                 obscureText: false,
               ),
               MyTextField(
                 labelText: "password",
+                 obscureText: true,
               ),
               MyTextField(
                 labelText: "Email",
+                 obscureText: false,
               ),
               Button(label: "sign up ", width: 7500, height: 40),
               Padding(
