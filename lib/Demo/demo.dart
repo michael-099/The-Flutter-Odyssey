@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:namer_app/Demo/home_page.dart";
 
 class Demo extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -21,6 +22,7 @@ class RootPageState extends State<RootPage> {
       appBar: AppBar(
         title: Text("Flutter"),
       ),
+      body: Home_page(),
       floatingActionButton: FloatingActionButton(
         onPressed: () => {},
         child: Icon(Icons.ac_unit_sharp),
