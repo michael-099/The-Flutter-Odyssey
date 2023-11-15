@@ -5,7 +5,7 @@ import 'Sign_in and Sign_up/signin.dart';
 import 'Demo/demo.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: Demo(),
-  ));
+  runApp(
+    Demo(),
+  );
 }
