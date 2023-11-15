@@ -5,3 +5,14 @@ class Demo extends StatelessWidget {
     return Scaffold();
   }
 }
+
+class RootPage extends StatefulWidget {
+  State createState() => RootPageState();
+}
+class RootPageState extends State<RootPage >{
+
+@override
+  Widget build(BuildContext context) {
+    return  Container();
+  }
+}
