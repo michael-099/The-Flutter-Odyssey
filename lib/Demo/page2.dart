@@ -16,8 +16,10 @@ Widget build(BuildContext context) {
       },
       icon:Icon(Icons.arrow_back_ios_new_rounded)
     ) ,
-   
-  
-  ));
+  ),
+  body:Column(children: [
+    Image.asset('black.jpg'),
+  ],)
+  );
 }
 }

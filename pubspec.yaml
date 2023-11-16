@@ -7,7 +7,6 @@ version: 0.0.1+1
 
 environment:
   sdk: ^3.1.1
-
 dependencies:
   flutter:
     sdk: flutter
@@ -24,3 +23,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+assets:
+  - images/black.jpg
