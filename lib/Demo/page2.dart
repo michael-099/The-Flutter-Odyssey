@@ -11,17 +11,22 @@ class Page2State extends State<page2> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home : Scaffold(
+      home: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.green,
-        
-            title: Text("page 2",),
+            title: Text(
+              "page 2",
+              style: TextStyle(color: Colors.white),
+            ),
             automaticallyImplyLeading: false,
             leading: IconButton(
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
-                icon: Icon(Icons.arrow_back_ios_new_rounded)),
+                icon: Icon(
+                  Icons.arrow_back_ios_new_rounded,
+                  color: Colors.white,
+                )),
           ),
           body: SingleChildScrollView(
             child: Column(
@@ -40,26 +45,31 @@ class Page2State extends State<page2> {
                     ),
                   ),
                 ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    primary: isSwitch ? Colors.blue : Colors.green,
-                  ),
-                  onPressed: () => {},
-                  child: Text(
-                    "blue me  ",
-                  ),
-                ),
-                OutlinedButton(
-                  onPressed: () => {},
-                  child: Text(
-                    "click me  ",
-                  ),
-                ),
-                TextButton(
-                  onPressed: () => {},
-                  child: Text(
-                    "click me  ",
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: isSwitch ? Colors.blue : Colors.green,
+                      ),
+                      onPressed: () => {},
+                      child: Text(
+                        "blue me  ",
+                      ),
+                    ),
+                    OutlinedButton(
+                      onPressed: () => {},
+                      child: Text(
+                        "click me  ",
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () => {},
+                      child: Text(
+                        "click me  ",
+                      ),
+                    ),
+                  ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,

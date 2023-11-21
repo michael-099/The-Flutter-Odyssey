@@ -6,13 +6,14 @@ class Home_page extends StatelessWidget {
     return Center(
       child: Container(
           child: ElevatedButton(
+             child: Text("click"),
               onPressed: () => {
                     Navigator.of(context)
                         .push(MaterialPageRoute(builder: (BuildContext context) {
                       return page2();
                     }))
                   },
-              child: Text("click"))),
+             )),
     );
   }
 }
