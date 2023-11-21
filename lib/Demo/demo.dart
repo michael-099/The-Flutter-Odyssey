@@ -6,7 +6,9 @@ class Demo extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(primarySwatch: Colors.yellow, ),
+        theme: ThemeData(
+          primarySwatch: Colors.yellow,
+        ),
         home: RootPage());
   }
 }
@@ -21,27 +23,61 @@ class RootPageState extends State<RootPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Flutter"),
+        title: Text(
+          "Flutter",
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: Colors.green,
       ),
       body: Home_page(),
       floatingActionButton: FloatingActionButton(
         onPressed: () => {},
         child: Icon(Icons.ac_unit_sharp),
       ),
+      //   bottomNavigationBar: NavigationBar(
+      //   destinations: [
+      //     NavigationDestination(icon: Icon(Icons.home), label: "home"),
+      //     NavigationDestination(icon: Icon(Icons.person), label: "profile"),
+      //   ],
+      //   onDestinationSelected: (int index) {
+      //     setState(() {
+      //       CurrentPage = index;
+      //     });
+      //   },
+      //   selectedIndex: CurrentPage,
+      // ), 
+    //  NavigationRail(
+    //     destinations: [
+    //       NavigationDestination(icon: Icon(Icons.home), label: "home"),
+    //       NavigationDestination(icon: Icon(Icons.person), label: "profile"),
+    //     ],
+    //     onDestinationSelected: (int index) {
+    //       setState(() {
+    //         CurrentPage = index;
+    //       });
+    //     },
+    //     selectedIndex: CurrentPage,
+    //   ),
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.white,
         items: [
-          Icon(Icons.home), 
-          Icon(Icons.person),
+          Icon(
+            Icons.home,
+            color: Colors.white,
+          ),
+          Icon(
+            Icons.person,
+            color: Colors.white,
+          ),
         ],
         height: 75.0,
         color: Colors.green,
-        // onDestinationSelected: (int index) {
-        //   setState(() {
-        //     CurrentPage = index;
-        //   });
-        // },
-        // selectedIndex: CurrentPage,
+        onTap: (int index) {
+          setState(() {
+            CurrentPage = index;
+          });
+        },
+        index: CurrentPage,
       ),
     );
   }

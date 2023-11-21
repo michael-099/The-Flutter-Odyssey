@@ -10,7 +10,7 @@ class SignUp extends StatelessWidget {
     return Scaffold(
         body: SafeArea(
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 220.0, horizontal: 30),
+        padding: const EdgeInsets.symmetric(vertical: 200.0, horizontal: 30),
         child: Center(
           child: Column(
             children: [
@@ -23,7 +23,6 @@ class SignUp extends StatelessWidget {
                 labelText: "User Name",
                 obscureText: false,
               ),
-              
               MyTextField(
                 labelText: "Email",
                 obscureText: false,
@@ -46,7 +45,10 @@ class SignUp extends StatelessWidget {
                           textAlign: TextAlign.right,
                         ),
                         onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder:(context)=>SignIn() ));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SignIn()));
                         },
                       ),
                     ]),
