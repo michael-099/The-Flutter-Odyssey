@@ -1,3 +1,4 @@
+import "package:curved_navigation_bar/curved_navigation_bar.dart";
 import "package:flutter/material.dart";
 import "package:namer_app/Demo/home_page.dart";
 
@@ -5,7 +6,7 @@ class Demo extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(primarySwatch: Colors.green),
+        theme: ThemeData(primarySwatch: Colors.yellow, ),
         home: RootPage());
   }
 }
@@ -27,17 +28,20 @@ class RootPageState extends State<RootPage> {
         onPressed: () => {},
         child: Icon(Icons.ac_unit_sharp),
       ),
-      bottomNavigationBar: NavigationBar(
-        destinations: [
-          NavigationDestination(icon: Icon(Icons.home), label: "home"),
-          NavigationDestination(icon: Icon(Icons.person), label: "profile"),
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: Colors.white,
+        items: [
+          Icon(Icons.home), 
+          Icon(Icons.person),
         ],
-        onDestinationSelected: (int index) {
-          setState(() {
-            CurrentPage = index;
-          });
-        },
-        selectedIndex: CurrentPage,
+        height: 75.0,
+        color: Colors.green,
+        // onDestinationSelected: (int index) {
+        //   setState(() {
+        //     CurrentPage = index;
+        //   });
+        // },
+        // selectedIndex: CurrentPage,
       ),
     );
   }

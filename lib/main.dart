@@ -6,6 +6,8 @@ import 'Demo/demo.dart';
 
 void main() {
   runApp(
-    Demo(),
-  );
+      // Demo(),
+      MaterialApp(
+    home:SignIn(),
+  ));
 }
