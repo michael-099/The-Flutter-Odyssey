@@ -1,6 +1,7 @@
 import "package:curved_navigation_bar/curved_navigation_bar.dart";
 import "package:flutter/material.dart";
 import "package:namer_app/Demo/home_page.dart";
+import "profile.dart";
 
 class Demo extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -9,7 +10,7 @@ class Demo extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.yellow,
         ),
-        home: RootPage());
+        home: RootPage(),);
   }
 }
 
@@ -19,9 +20,22 @@ class RootPage extends StatefulWidget {
 
 class RootPageState extends State<RootPage> {
   int CurrentPage = 0;
+  Widget? body;
   @override
   Widget build(BuildContext context) {
+    void handeleNAvigetion(index) {
+      setState(() {
+        switch (index) {
+          case 0:
+            body = Home_page();
+          case 1:
+            body = Profile();
+        }
+      });
+    }
+  
     return Scaffold(
+      
       appBar: AppBar(
         title: Text(
           "Flutter",
@@ -29,7 +43,7 @@ class RootPageState extends State<RootPage> {
         ),
         backgroundColor: Colors.green,
       ),
-      body: Home_page(),
+      body: body,
       floatingActionButton: FloatingActionButton(
         onPressed: () => {},
         child: Icon(Icons.ac_unit_sharp),
@@ -45,19 +59,19 @@ class RootPageState extends State<RootPage> {
       //     });
       //   },
       //   selectedIndex: CurrentPage,
-      // ), 
-    //  NavigationRail(
-    //     destinations: [
-    //       NavigationDestination(icon: Icon(Icons.home), label: "home"),
-    //       NavigationDestination(icon: Icon(Icons.person), label: "profile"),
-    //     ],
-    //     onDestinationSelected: (int index) {
-    //       setState(() {
-    //         CurrentPage = index;
-    //       });
-    //     },
-    //     selectedIndex: CurrentPage,
-    //   ),
+      // ),
+      //  NavigationRail(
+      //     destinations: [
+      //       NavigationDestination(icon: Icon(Icons.home), label: "home"),
+      //       NavigationDestination(icon: Icon(Icons.person), label: "profile"),
+      //     ],
+      //     onDestinationSelected: (int index) {
+      //       setState(() {
+      //         CurrentPage = index;
+      //       });
+      //     },
+      //     selectedIndex: CurrentPage,
+      //   ),
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.white,
         items: [
@@ -73,9 +87,7 @@ class RootPageState extends State<RootPage> {
         height: 75.0,
         color: Colors.green,
         onTap: (int index) {
-          setState(() {
-            CurrentPage = index;
-          });
+          handeleNAvigetion(index);
         },
         index: CurrentPage,
       ),
