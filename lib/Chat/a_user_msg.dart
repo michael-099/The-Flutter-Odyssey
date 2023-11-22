@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 
-class BotMsg extends StatelessWidget {
+
+class UserMsg extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container();
   }
