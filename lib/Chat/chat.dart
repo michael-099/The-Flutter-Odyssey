@@ -19,7 +19,7 @@ class Chat extends StatelessWidget {
               children: [
                 UserMsg(),
                 BotMsg(),
-                chatField(),
+                ChatField(),
               ],
             )));
   }
