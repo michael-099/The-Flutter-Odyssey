@@ -6,11 +6,12 @@ import "profile.dart";
 class Demo extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          primarySwatch: Colors.yellow,
-        ),
-        home: RootPage(),);
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.yellow,
+      ),
+      home: RootPage(),
+    );
   }
 }
 
@@ -33,9 +34,8 @@ class RootPageState extends State<RootPage> {
         }
       });
     }
-  
+
     return Scaffold(
-      
       appBar: AppBar(
         title: Text(
           "Flutter",
