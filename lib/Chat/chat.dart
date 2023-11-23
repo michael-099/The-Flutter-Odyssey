@@ -6,20 +6,33 @@ import "chat_field.dart";
 class Chat extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+        debugShowCheckedModeBanner: false,
         home: Scaffold(
             appBar: AppBar(
-
-              title: Text("chat" ,style:TextStyle(color: Colors.white)),
+              title: Text("chat", style: TextStyle(color: Colors.white)),
               centerTitle: true,
               backgroundColor: Colors.blue[200],
-              
             ),
             body: Column(
               children: [
-                UserMsg(),
-                BotMsg(),
-                ChatField(),
+                SingleChildScrollView(
+                  child: Container(
+                    height: MediaQuery.of(context).size.height * 0.81,
+                    child: SingleChildScrollView(
+                      child: Column(children: [
+                        UserMsg(),
+                        BotMsg(),
+                        UserMsg(),
+                        BotMsg(),
+                        UserMsg(),
+                        BotMsg(),
+                        UserMsg(),
+                        BotMsg(),
+                      ]),
+                    ),
+                  ),
+                ),
+                ChatField()
               ],
             )));
   }

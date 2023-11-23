@@ -4,6 +4,9 @@ class BotMsg extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipRRect(
       child: Container(
+        padding: EdgeInsets.all(16.0),
+        margin: EdgeInsets.fromLTRB(16.0, 16.0, 100.0, 16.0),
+        color: const Color.fromARGB(255, 47, 90, 124),
         // decoration: BoxDecoration(borderRadius: BorderRadius.circular(1.0)),
         constraints: BoxConstraints(
           minHeight: 100, // Set your minimum height
@@ -11,10 +14,7 @@ class BotMsg extends StatelessWidget {
           minWidth: MediaQuery.of(context).size.width * 0.99,
           maxWidth: MediaQuery.of(context).size.width * 0.99,
         ),
-        padding: EdgeInsets.all(16.0),
-        margin: EdgeInsets.fromLTRB(16.0,16.0,100.0,16.0),
-        color: const Color.fromARGB(255, 47, 90, 124),
-        
+
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -30,8 +30,7 @@ class BotMsg extends StatelessWidget {
                 ),
               ],
             ),
-            Text(
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
           ],
         ),
       ),
