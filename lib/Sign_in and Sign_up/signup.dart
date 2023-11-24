@@ -9,54 +9,54 @@ class SignUp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 200.0, horizontal: 30),
-        child: Center(
-          child: Column(
-            children: [
-              Text("Sign Up",
-                  style: TextStyle(
-                      fontSize: 40,
-                      color: Color.fromARGB(255, 117, 116, 114),
-                      fontWeight: FontWeight.w600)),
-              MyTextField(
-                labelText: "User Name",
-                obscureText: false,
-              ),
-              MyTextField(
-                labelText: "Email",
-                obscureText: false,
-              ),
-              MyTextField(
-                labelText: "password",
-                obscureText: true,
-              ),
-              Button(label: "sign up ", width: 7500, height: 40),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 30.0, vertical: 8.0),
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      GestureDetector(
-                        child: Text(
-                          "sign in",
-                          style: TextStyle(color: Colors.blue[400]),
-                          textAlign: TextAlign.right,
-                        ),
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => SignIn()));
-                        },
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Sign Up",
+                style: TextStyle(
+                    fontSize: 40,
+                    color: Color.fromARGB(255, 117, 116, 114),
+                    fontWeight: FontWeight.w600)),
+            MyTextField(
+              labelText: "User Name",
+              obscureText: false,
+            ),
+            MyTextField(
+              labelText: "Email",
+              obscureText: false,
+            ),
+            MyTextField(
+              labelText: "password",
+              obscureText: true,
+            ),
+            Button(
+                label: "sign up ",
+                width: MediaQuery.of(context).size.width * 1,
+                height: 50),
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 30.0, vertical: 8.0),
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    TextButton(
+                      child: Text(
+                        "sign in",
+                        style: TextStyle(color: Colors.blue[400]),
+                        textAlign: TextAlign.right,
                       ),
-                    ]),
-              ),
-            ],
-          ),
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => SignIn()));
+                      },
+                    )
+                  ]),
+            ),
+          ],
         ),
       ),
+      // ),
     ));
   }
 }

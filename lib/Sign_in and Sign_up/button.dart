@@ -13,10 +13,9 @@ class Button extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 8.0),
       child: Expanded(
         child: Container(
-          color: Colors.black,
           width: width,
           height: height,
-          // decoration: BoxDecoration(borderRadius: BorderRadius.circular(radius)),
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0) ,color: Colors.black,),
           child: Center(
             child: Text(
               label,

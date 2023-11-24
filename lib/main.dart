@@ -6,7 +6,11 @@ import 'Demo/demo.dart';
 import 'Chat/chat.dart';
 
 void main() {
-  runApp(
-    Chat(),
-  );
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: SignIn(),
+  )
+      // Chat(),
+
+      );
 }
