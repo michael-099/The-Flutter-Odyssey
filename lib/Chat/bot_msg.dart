@@ -42,7 +42,7 @@ class BotMsg extends StatelessWidget {
             Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
           ],
         ),
-      ),
+      ), 
     );
     ;
   }
