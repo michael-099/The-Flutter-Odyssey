@@ -1,6 +1,8 @@
 import "package:flutter/material.dart";
 
 class UserMsg extends StatelessWidget {
+  final String message;
+  UserMsg({required this.message});
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
@@ -41,7 +43,8 @@ class UserMsg extends StatelessWidget {
             ],
           ),
           Text(
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eros nibh, dictum iaculis euismod ut, varius ut est. Suspendisse at mollis risus. Vestibulum laoreet lectus at mi bibendum, sit amet semper dui varius. Morbi iaculis mauris elementum diam mollis rhoncus. Praesent convallis dolor non risus pretium, et rhoncus ligula pulvinar. Donec convallis sed purus eget porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+            message,
+          )
         ],
       ),
     );
