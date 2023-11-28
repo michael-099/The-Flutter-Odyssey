@@ -20,9 +20,7 @@ class Chat extends StatelessWidget {
                   child: Container(
                     height: MediaQuery.of(context).size.height * 0.85,
                     child: SingleChildScrollView(
-                      child: 
-                      Column(
-                        
+                      child: Column(),
                     ),
                   ),
                 ),
