@@ -26,9 +26,22 @@ class VideoChatState extends State<VideoChat> {
     _engine = await RtcEngine.createWithConfig(RtcEngineConfig(AppID));
     await _engine.enableVideo();
     _engine.setEventHandler(RtcEngineEventHandler(
-        onJoinChannelSuccess: (String channel, int uid, int elapsed) {},
-        onUserJoined: (int uid, int elapsed) {},
-        userOffLine: (int uid, UserOffLineReason reason) {}));
+        onJoinChannelSuccess: (String channel, int uid, int elapsed) {
+      print("local user $uid joind");
+    }, 
+    onUserJoined: (int uid, int elapsed) {
+      print("remote  user $uid joind");
+      setState((){
+        _remoteUid = uid;
+      })
+    }, 
+    userOffLine: (int uid, UserOffLineReason reason) {
+      print("remote user $uid left");
+      setState(() {
+        _remoteUid = null;
+      });
+    }));
+    await _engine.joinChannel(token,"learn",null,0);
   }
 
   Widget build(BuildContext context) {
