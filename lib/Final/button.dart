@@ -5,8 +5,12 @@ class Button extends StatelessWidget {
   final String label;
   final double width;
   final double height;
+  final double radius;
   const Button(
-      {required this.label, required this.width, required this.height ,});
+      {required this.label,
+      required this.width,
+      required this.height,
+      required this.radius});
 
   Widget build(BuildContext context) {
     return Padding(
@@ -15,7 +19,10 @@ class Button extends StatelessWidget {
         child: Container(
           width: width,
           height: height,
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0) ,color: Colors.black,),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(radius),
+            color: Colors.black,
+          ),
           child: Center(
             child: Text(
               label,
