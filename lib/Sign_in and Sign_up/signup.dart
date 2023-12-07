@@ -21,14 +21,20 @@ class SignUp extends StatelessWidget {
             MyTextField(
               labelText: "User Name",
               obscureText: false,
+              radius: 10,
+              width: 500,
             ),
             MyTextField(
               labelText: "Email",
               obscureText: false,
+              radius: 10,
+              width: 500,
             ),
             MyTextField(
               labelText: "password",
               obscureText: true,
+              radius: 10,
+              width: 500,
             ),
             Button(
                 label: "sign up ",

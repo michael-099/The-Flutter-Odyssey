@@ -14,7 +14,13 @@ class Login extends StatelessWidget {
           labelText: "Login",
           obscureText: false,
           width: 600,
-          radius: 20.0,
+          // radius: 20.0,
+        ),
+        MyTextField(
+          labelText: "Password",
+          obscureText: true ,
+          width: 600,
+          // radius: 20.0,
         ),
         Button(
           height: 50,
