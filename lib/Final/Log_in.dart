@@ -13,10 +13,15 @@ class Login extends StatelessWidget {
         MyTextField(
           labelText: "Login",
           obscureText: false,
-          width:500,
-          radius:20.0,
+          width: 600,
+          radius: 20.0,
         ),
-        Button(height: 50,label: "Login ",width: 600,),
+        Button(
+          height: 50,
+          label: "Login ",
+          width: 600,
+          radius: 20,
+        ),
       ],
     )));
   }

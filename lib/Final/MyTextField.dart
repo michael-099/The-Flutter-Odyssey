@@ -14,17 +14,14 @@ class MyTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: width,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 8.0),
-        child: TextField(
-          obscureText: obscureText,
-          //  controller: textController2,
-          decoration: InputDecoration(
-            labelText: labelText,
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.black),
-              borderRadius: BorderRadius.circular(radius),
-            ),
+
+      child: TextField(
+        obscureText: obscureText,
+        decoration: InputDecoration(
+          labelText: labelText,
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.black),
+            borderRadius: BorderRadius.circular(radius),
           ),
         ),
       ),
