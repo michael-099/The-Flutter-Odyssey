@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 
-class banner extends StatelessWidget {
+class Info extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container();
   }

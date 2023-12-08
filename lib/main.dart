@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'Demo/demo.dart';
 import 'Chat/chat.dart';
 import'Final/Login/Log_in.dart';
+import 'Final/Profile/profile.dart';
 
 void main() {
   runApp(
@@ -14,7 +15,8 @@ void main() {
     // )
     // Chat(),
     // Demo(),
-    Login(),
+    // Login(),
+    Profile()
 
   );
   
