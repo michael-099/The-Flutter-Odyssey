@@ -4,20 +4,26 @@ import "button.dart";
 class Baner extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blue[400],
+        width: double.infinity,
+        color: Colors.blue[400],
         child: Column(
-      children: [
-        Image.asset(
-          'black.jpg',
-          width: 200,
-          height: 200,
-          fit: BoxFit.cover,
-          alignment: Alignment.center,
-        ),
-        Text("jassica Simpson"),
-        Text("Female"),
-        Button(label: "Share Profile", width: 100, height: 20, radius: 10)
-      ],
-    ));
+          children: [
+            Container(
+              width: 100,
+              height: 100,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(100.0),
+                  image: DecorationImage(
+                    image: AssetImage(
+                      'assets/images/black.jpg',
+                    ),
+                    fit: BoxFit.cover,
+                  )),
+            ),
+            Text("jassica Simpson"),
+            Text("Female"),
+            Button(label: "Share Profile", width: 100, height: 20, radius: 10)
+          ],
+        ));
   }
 }
