@@ -35,7 +35,6 @@ class Discription extends StatelessWidget {
                     color: Colors.blue[90],
                     fontWeight: FontWeight.w300,
                     fontSize: 12,
-                    
                   ),
                 ),
               ),
