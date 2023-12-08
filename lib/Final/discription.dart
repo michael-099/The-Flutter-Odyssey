@@ -5,8 +5,8 @@ class Discription extends StatelessWidget {
     return Align(
       alignment: Alignment.topLeft,
       child: Container(
-          width: 200,
-          height: 150,
+          width: 300,
+          height: 200,
           child: Column(
             children: [
               Align(
@@ -14,9 +14,9 @@ class Discription extends StatelessWidget {
                 child: Text("Hello,",
                     style: TextStyle(
                       color: Color.fromARGB(255, 0, 136, 20),
-                      fontSize: 40,
+                      fontSize: 50,
                       fontWeight: FontWeight.bold,
-                      letterSpacing: 1,
+                      letterSpacing: 1.5,
                     )),
               ),
               Align(
@@ -24,9 +24,13 @@ class Discription extends StatelessWidget {
                   child: Text("login now.",
                       style: TextStyle(
                           color: Colors.blue[90],
-                          fontSize: 40,
+                          fontSize: 50,
                           fontWeight: FontWeight.bold,
-                          letterSpacing: 1))),
+                          letterSpacing: 1.5))),
+              SizedBox(
+                height: 20,
+                width: 10,
+              ),
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
