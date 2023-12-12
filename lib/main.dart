@@ -13,10 +13,10 @@ void main() {
     //   debugShowCheckedModeBanner: false,
     //   home: SignIn(),
     // )
-    // Chat(),
+    Chat(),
     // Demo(),
     // Login(),
-    Profile()
+    // Profile()
 
   );
   
