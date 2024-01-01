@@ -6,7 +6,7 @@ import "package:flutter/material.dart";
   @override
   Widget build(BuildContext context) {
     return Container( 
-      child:Image.asset('black.jpg',
+      child:Image.asset('assets/black.jpg',
       width:10.0 ,
       height: 10.0,)
       
