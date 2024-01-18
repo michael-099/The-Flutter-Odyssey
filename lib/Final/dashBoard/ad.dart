@@ -1,14 +1,14 @@
 import "package:flutter/material.dart";
 
  class Ad extends StatelessWidget {
-  const Ad({super.key});
+
 
   @override
   Widget build(BuildContext context) {
     return Container( 
-      child:Image.asset('assets/black.jpg',
-      width:10.0 ,
-      height: 10.0,)
+      child:Image.asset('assets/images/black.jpg',
+      width:100.0 ,
+      height: 100.0,)
       
     );
   }
