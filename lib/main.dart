@@ -8,6 +8,7 @@ import 'Chat/chat.dart';
 import 'Final/Login/Log_in.dart';
 import 'Final/Profile/profile.dart';
 import 'Final/dashBoard/Ad.dart';
+import "class/main.dart";
 
 void main() {
   runApp(
@@ -19,7 +20,8 @@ void main() {
     // Demo(),
     // Login(),
     // Profile()
-    dashBoard()
+    // dashBoard()
+    MyApp()
 
   );
 }
