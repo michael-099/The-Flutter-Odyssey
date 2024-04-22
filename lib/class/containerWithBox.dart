@@ -5,7 +5,17 @@ class ContainerWithBox extends StatelessWidget {
   Widget build(BuildContext contexst) {
     return Column(
       children: <Widget>[
-        Container(),
+        Container(
+          height: 200.0,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(100.0),
+                  bottomRight: Radius.circular(100.0)),
+                  
+                boxShadow: [BoxShadow(color: Colors.black12)]),
+                  
+                
+        ),
       ],
     );
   }
