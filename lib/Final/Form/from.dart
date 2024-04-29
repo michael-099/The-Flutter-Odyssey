@@ -32,54 +32,56 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('Form Demo'),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          title: const Text('Form Demo'),
+        ),
+        body: SafeArea(
+            child: Column(
+          children: <Widget>[
+            Form(
+                key: _formStateKey,
+                autovalidateMode: AutovalidateMode.always,
+                
+                
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Column(children: <Widget>[
+      
+      
+                    TextFormField(
+                      decoration: const InputDecoration(
+                          hintText: 'coffe', labelText: "Item"),
+                      validator: (value) => _validateItemCount(value!),
+                      onSaved: (value) => _order.item = value!,
+                    ),
+      
+      
+                    TextFormField(
+                      decoration: const InputDecoration(
+                          hintText: 'coffe', labelText: "Quantity"),
+                      validator: (value) => _validateItemCount(value!),
+                      onSaved: (value) => _order.quantity = int.tryParse(value!),
+                    ),
+      
+      
+                    const Divider(
+                      height: 72.0,
+                    ),
+      
+                    
+                    ElevatedButton(
+                      onPressed: () => _submitOrder(),
+                      child: const Text("Save"),
+                    )
+                  ]),
+                ))
+          ],
+        )),
+        // This trailing comma makes auto-formatting nicer for build methods.
       ),
-      body: SafeArea(
-          child: Column(
-        children: <Widget>[
-          Form(
-              key: _formStateKey,
-              autovalidateMode: AutovalidateMode.always,
-              
-              
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Column(children: <Widget>[
-
-
-                  TextFormField(
-                    decoration: const InputDecoration(
-                        hintText: 'coffe', labelText: "Item"),
-                    validator: (value) => _validateItemCount(value!),
-                    onSaved: (value) => _order.item = value!,
-                  ),
-
-
-                  TextFormField(
-                    decoration: const InputDecoration(
-                        hintText: 'coffe', labelText: "Quantity"),
-                    validator: (value) => _validateItemCount(value!),
-                    onSaved: (value) => _order.quantity = int.tryParse(value!),
-                  ),
-
-
-                  const Divider(
-                    height: 72.0,
-                  ),
-
-                  
-                  ElevatedButton(
-                    onPressed: () => _submitOrder(),
-                    child: const Text("Save"),
-                  )
-                ]),
-              ))
-        ],
-      )),
-      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
