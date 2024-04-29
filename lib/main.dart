@@ -9,19 +9,18 @@ import 'Final/Login/Log_in.dart';
 import 'Final/Profile/profile.dart';
 import 'Final/dashBoard/Ad.dart';
 import "class/main.dart";
+import "final/Form/from.dart";
 
 void main() {
   runApp(
-    //   MaterialApp(
-    //   debugShowCheckedModeBanner: false,
-    //   home: SignIn(),
-    // )
-    // Chat(),
-    // Demo(),
-    // Login(),
-    // Profile()
-    // dashBoard()
-    MyApp()
-
-  );
+      //   MaterialApp(
+      //   debugShowCheckedModeBanner: false,
+      //   home: SignIn(),
+      // )
+      // Chat(),
+      // Demo(),
+      // Login(),
+      // Profile()
+      // dashBoard()
+      MyApp());
 }
