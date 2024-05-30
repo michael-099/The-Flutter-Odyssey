@@ -17,7 +17,7 @@ class Page1 extends StatelessWidget {
             size: 20,
           ),
         ],
-        leading:Icon(Icons.menu,color:Colors.white,size:20),
+        leading:IconButton(onPressed:(){},icon: Icon(Icons.menu)),
         backgroundColor: Theme.of(context).primaryColor,
       ),
     );
